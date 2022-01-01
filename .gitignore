@@ -1,3 +1,14 @@
 *
 
 !.gitignore 
+!Pokemon.csv
+!pokemon.db
+!run.py
+
+!database/
+!database/*.py
+
+!pokedex/
+!pokedex/*.py
+!pokedex/static/
+!pokedex/templates/
