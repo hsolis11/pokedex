@@ -3,8 +3,8 @@
 {% block content %}
     <h1>Pokedex</h1>
     <p>Search for a Pokemon in the National Pokedex.</p>
-    <form action="/" method="get">
-        <input type="text" placeholder="Name or Pokedex">
+    <form action="/" method="POST">
+        <input type="text" id='pokemonName' name='pokemonName' placeholder="Name or Pokedex">
         <button type="submit">Search</button>
     </form>
     {% if pokemon is defined %}
