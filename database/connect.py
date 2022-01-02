@@ -50,6 +50,9 @@ def fill_table():
     with open(CSV_FILE, newline='') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
+            row['Name'] = row['Name'].lower()
+            row['Type 1'] = row['Type 1'].lower()
+            row['Type 2'] = row['Type 2'].lower()
             c.execute(""" INSERT INTO pokemon(id,name,type_1,type_2,total,hp,attack,
                             defense,sp_atk,sp_def,speed,generation,legendary)
                             VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?);""", [*row.values()])
