@@ -14,4 +14,9 @@
 !pokedex/
 !pokedex/*.py
 !pokedex/static/
+!pokedex/static/images/
+!pokedex/static/images/pokemon_images/
+!pokedex/static/images/pokemon_images/*.png
+!pokedex/static/images/pokemon_images/*.jpg
 !pokedex/templates/
+!pokedex/templates/*.html
