@@ -4,7 +4,7 @@ from flask import render_template, request
 
 
 @app.route('/', methods=['GET', 'POST'])
-def hello_world():  # put application's code here
+def index():  # put application's code here
     title = "Pokedex"
 
     if request.method == 'POST':
