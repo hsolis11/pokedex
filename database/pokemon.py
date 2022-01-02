@@ -1,35 +1,6 @@
 from database.base_connection import Store
-from abc import ABC, abstractmethod
 import dataclasses
-from dataclasses import dataclass
-
-
-@dataclass
-class Pokemon:
-    id: int
-    name: str
-    type_1: str
-    type_2: str
-    total: int
-    hp: int
-    attack: int
-    defense: int
-    sp_atk: int
-    sp_def: int
-    speed: int
-    generation: int
-    legendary: bool
-
-
-class AbstractPokemons(ABC):
-    def add(cls, pokemon: Pokemon):
-        raise NotImplementedError
-
-    def get(cls, id: int, name: str):
-        raise NotImplementedError
-
-    def list(cls):
-        raise NotImplementedError
+from models import Pokemon, AbstractPokemons
 
 
 class Pokemons(AbstractPokemons, Store):
