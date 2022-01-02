@@ -1,4 +1,6 @@
 from pokedex import app
+import database
+from flask import render_template, request
 
 
 @app.route('/')
