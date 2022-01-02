@@ -10,7 +10,7 @@ def index():  # put application's code here
     if request.method == 'POST':
         data = request.form.to_dict()
         repo = database.Pokemons()
-        pokemon = repo.get(name=data['pokemonName'])
+        pokemon = repo.get(name=data['pokemonName'].lower())
         if pokemon:
             title = f"{pokemon.name} - {pokemon.id} - Pokedex"
             return render_template('stats.html', title=title, pokemon=pokemon, image=f'{pokemon.name.lower()}.png')
