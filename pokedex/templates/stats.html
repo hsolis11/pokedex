@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Pokedex</h1>
+    <p>Search for a Pokemon in the National Pokedex.</p>
+    <form action="/" method="get">
+        <input type="text" placeholder="Name or Pokedex">
+        <button type="submit">Search</button>
+    </form>
+    {% if pokemon is defined %}
+    <main>
+    <h2>{{ pokemon.name }}</h2>
+        <p>#{{ pokemon.id }}</p>
+    <div>
+        <img src="{{ url_for('static', filename='images/pokemon_images/'+image) }}" alt="">
+    </div>
+    <div>
+        <table>
+            <thead>Base Stats</thead>
+            <tbody>
+            <tr>
+                <th>HP</th>
+                <td>{{ pokemon.hp }}</td>
+                <td>{{ pokemon.hp }}</td>
+            </tr>
+            <tr>
+                <th>Attack</th>
+                <td>{{ pokemon.attack }}</td>
+                <td>{{ pokemon.attack }}</td>
+            </tr>
+            <tr>
+                <th>Defense</th>
+                <td>{{ pokemon.defense }}</td>
+                <td>{{ pokemon.defense }}</td>
+            </tr>
+            <tr>
+                <th>Sp. Atk</th>
+                <td>{{ pokemon.sp_atk }}</td>
+                <td>{{ pokemon.sp_atk }}</td>
+            </tr>
+            <tr>
+                <th>Sp. Def</th>
+                <td>{{ pokemon.sp_def }}</td>
+                <td>{{ pokemon.sp_def }}</td>
+            </tr>
+            <tr>
+                <th>Speed</th>
+                <td>{{ pokemon.speed }}</td>
+                <td>{{ pokemon.speed }}</td>
+            </tr>
+            <tr>
+                <th>Total</th>
+                <td>{{ pokemon.total }}</td>
+                <td>{{ pokemon.total }}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    </main>
+    {% endif %}
+
+{% endblock %}
