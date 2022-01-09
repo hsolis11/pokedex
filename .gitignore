@@ -20,3 +20,9 @@
 !pokedex/static/images/pokemon_images/*.jpg
 !pokedex/templates/
 !pokedex/templates/*.html
+!pokedex/tests/
+!pokedex/tests/*.py
+
+!forms/
+!forms/test/
+!forms/test/*.py
