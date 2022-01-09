@@ -1,0 +1,46 @@
+@forward "../components/card";
+@forward "../components/buttons";
+
+html {
+  font-family: 'Roboto', sans-serif;
+  background-color: #fa6b6c;
+}
+
+main {
+  div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    .pokemon-name, .pokemon-id {
+      display: inline-block;
+      color: white;
+      padding: 15px;
+    }
+
+    .pokemon-name {
+      font-size: 34px;
+      font-weight: bolder;
+    }
+
+    .pokemon-id {
+
+    }
+  }
+
+  .pokemon-container {
+    display: flex;
+    flex-direction: column;
+
+    .pokemon-image-container {
+      width: 100%;
+
+      img {
+        margin: auto auto;
+        width: 75%;
+      }
+    }
+
+  }
+}

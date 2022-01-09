@@ -1,0 +1,23 @@
+$linkColor: black;
+$card-bkg: snow;
+
+
+// FIXME: Need to find out the correct break points, this is only temp.
+/*
+    1920*1080
+    1366*768
+    360*640
+    414*896
+    1536*864
+    375*667
+ */
+
+
+$breakpoints: (
+  'xsmall': (min-width: 360px),
+  'small': (min-width: 650px),
+  'medium': (min-width: 800px),
+  'large': (min-width: 1300px),
+  'xlarge': (min-width: 1536px),
+  'huge': (min-width: 1920px)
+);

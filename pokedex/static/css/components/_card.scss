@@ -1,0 +1,52 @@
+@use '../abstracts/variables' as v;
+
+.card-container {
+  border-radius: 15px 15px 0px 0px;
+  width: 100%;
+  background-color: v.$card-bkg;
+
+  table {
+    width: 100%;
+    thead {
+      border-bottom: 1px solid gray;
+
+      tr {
+        th {
+         text-align: left;
+          padding: 30px 7px 7px 7px;
+          border-bottom: 3px solid black;
+        }
+      }
+    }
+
+    tbody {
+
+      tr {
+        .card-stat-name {
+
+        }
+
+        .card-stat {
+          font-weight: bold;
+          text-align: center;
+        }
+
+        th {
+          text-align: left;
+          width: 30%;
+          padding: 7px;
+          color: gray;
+        }
+        td {
+          padding: 5px;
+          width: 35%;
+        }
+      }
+
+
+    }
+
+
+  }
+
+}
