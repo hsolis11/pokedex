@@ -1,6 +1,16 @@
+@forward "../components/buttons";
 form {
-
+  text-align: center;
   input {
+
+    background-color: rgba(0,0,0, 0);
+    border: none;
+    color: white;
+    border-bottom: 2px solid black;
+    font-size: 1.5rem;
+    &[type='text']:focus {
+      outline: none;
+    }
 
   }
 

@@ -1,9 +1,11 @@
 @forward "../components/card";
 @forward "../components/buttons";
+@forward "../layout/form";
+@forward "../theme/themes";
+@forward "../base/typography";
 
 html {
   font-family: 'Roboto', sans-serif;
-  background-color: #fa6b6c;
 }
 
 main {
