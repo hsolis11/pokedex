@@ -6,7 +6,12 @@
     <title>{{ title }}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 </head>
-<body>
+{% if pokemon is defined %}
+    <body class="type_{{ pokemon.type_1 }}">
+    {% else %}
+        <body>
+{% endif %}
+
 {% block content %}
 {% endblock %}
 </body>
