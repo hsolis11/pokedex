@@ -5,57 +5,66 @@
     <p>Search for a Pokemon in the National Pokedex.</p>
     <form action="/" method="POST">
         <input type="text" id='pokemonName' name='pokemonName' placeholder="Name or Pokedex">
-        <button type="submit">Search</button>
+        <button type="submit" id="button">Search</button>
     </form>
     {% if pokemon is defined %}
     <main>
-    <h2>{{ pokemon.name.title() }}</h2>
-        <p>#{{ pokemon.id }}</p>
-    <div>
-        <img src="{{ url_for('static', filename='images/pokemon_images/'+image) }}" alt="">
-    </div>
-    <div>
-        <table>
-            <thead>Base Stats</thead>
-            <tbody>
-            <tr>
-                <th>HP</th>
-                <td>{{ pokemon.hp }}</td>
-                <td>{{ pokemon.hp }}</td>
-            </tr>
-            <tr>
-                <th>Attack</th>
-                <td>{{ pokemon.attack }}</td>
-                <td>{{ pokemon.attack }}</td>
-            </tr>
-            <tr>
-                <th>Defense</th>
-                <td>{{ pokemon.defense }}</td>
-                <td>{{ pokemon.defense }}</td>
-            </tr>
-            <tr>
-                <th>Sp. Atk</th>
-                <td>{{ pokemon.sp_atk }}</td>
-                <td>{{ pokemon.sp_atk }}</td>
-            </tr>
-            <tr>
-                <th>Sp. Def</th>
-                <td>{{ pokemon.sp_def }}</td>
-                <td>{{ pokemon.sp_def }}</td>
-            </tr>
-            <tr>
-                <th>Speed</th>
-                <td>{{ pokemon.speed }}</td>
-                <td>{{ pokemon.speed }}</td>
-            </tr>
-            <tr>
-                <th>Total</th>
-                <td>{{ pokemon.total }}</td>
-                <td>{{ pokemon.total }}</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
+        <div>
+            <h2 class="pokemon-name">{{ pokemon.name.title() }}</h2>
+            <p class="pokemon-id">#{{ pokemon.id }}</p>
+        </div>
+        <div class="pokemon-container">
+            <div class="pokemon-image-container">
+                <img src="{{ url_for('static', filename='images/pokemon_images/'+image) }}" alt="">
+            </div>
+            <div class="card-container">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Base Stats</th>
+                        <td colspan="2"></td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th class="card-stat-name">HP</th>
+                        <td class="card-stat">{{ pokemon.hp }}</td>
+                        <td>{{ pokemon.hp }}</td>
+                    </tr>
+                    <tr>
+                        <th class="card-stat-name">Attack</th>
+                        <td class="card-stat">{{ pokemon.attack }}</td>
+                        <td>{{ pokemon.attack }}</td>
+                    </tr>
+                    <tr>
+                        <th class="card-stat-name">Defense</th>
+                        <td class="card-stat">{{ pokemon.defense }}</td>
+                        <td>{{ pokemon.defense }}</td>
+                    </tr>
+                    <tr>
+                        <th class="card-stat-name">Sp. Atk</th>
+                        <td class="card-stat">{{ pokemon.sp_atk }}</td>
+                        <td>{{ pokemon.sp_atk }}</td>
+                    </tr>
+                    <tr>
+                        <th class="card-stat-name">Sp. Def</th>
+                        <td class="card-stat">{{ pokemon.sp_def }}</td>
+                        <td>{{ pokemon.sp_def }}</td>
+                    </tr>
+                    <tr>
+                        <th class="card-stat-name">Speed</th>
+                        <td class="card-stat">{{ pokemon.speed }}</td>
+                        <td>{{ pokemon.speed }}</td>
+                    </tr>
+                    <tr>
+                        <th class="card-stat-name">Total</th>
+                        <td class="card-stat">{{ pokemon.total }}</td>
+                        <td>{{ pokemon.total }}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </main>
     {% endif %}
 
